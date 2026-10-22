@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A beginner-friendly guide to web development by Clifford." />
+  <title>Clifford – Web Development</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Clifford<span class="dot"></span></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="header-nav" id="nav" aria-label="Main navigation">
+        <a href="#how-to-code">How to code</a>
+        <a href="#frontend-language">Frontend</a>
+        <a href="#backend-language">Backend</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-inner">
+        <p class="hero-note">Beginner friendly</p>
+        <h1 class="hero-title">web<br />development</h1>
+        <p class="hero-text">Learn the building blocks of the web, one simple idea at a time.</p>
+        <a href="#how-to-code" class="scroll-cue" aria-label="Scroll to content">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section id="how-to-code" class="reveal">
+      <div class="container content-grid">
+        <div>
+          <h2 class="section-head">How to code</h2>
+          <div class="section-copy">
+            <p>Coding is how we tell a computer what to do. We write instructions in a language it understands, and those instructions become websites, apps, and tools.</p>
+            <p>It feels strange at first. Start with words, then structure, then style, and soon you are building things people can use.</p>
+            <p>Practice slowly and keep projects small. Every one teaches you something.</p>
+          </div>
+        </div>
+        <div class="code-panel" aria-label="Example page skeleton">
+          <div class="panel-bar"><span></span><span></span><span></span><button class="replay" id="replay">Replay</button></div>
+          <div class="code-lines" id="typewriter" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="frontend-language" class="reveal alt">
+      <div class="container content-grid">
+        <div>
+          <h2 class="section-head">Frontend language</h2>
+          <div class="section-copy">
+            <p>The frontend is what people see and use in the browser: content, layout, colors, buttons, and menus. Tap a language to see what it does.</p>
+          </div>
+        </div>
+        <div class="snippet-stack">
+          <div class="tabs" role="tablist" aria-label="Frontend languages">
+            <button role="tab" class="tab is-active" data-tab="html" aria-selected="true">HTML</button>
+            <button role="tab" class="tab" data-tab="css" aria-selected="false">CSS</button>
+            <button role="tab" class="tab" data-tab="js" aria-selected="false">JavaScript</button>
+          </div>
+          <div class="tab-panel" id="tabPanel" role="tabpanel">
+            <p id="tabText"></p>
+            <pre><code id="tabCode"></code></pre>
+            <button class="copy" id="copyBtn">Copy code</button>
+          </div>
+          <div class="try-box">
+            <p class="try-label">Try it: edit the color</p>
+            <input id="colorInput" class="try-input" value="tomato" aria-label="CSS color" />
+            <h3 class="try-demo" id="tryDemo">Hello, world!</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="backend-language" class="reveal">
+      <div class="container backend-wrap">
+        <div>
+          <h2 class="section-head">Backend language</h2>
+          <div class="section-copy">
+            <p>The backend runs on a server. It handles data, logins, form submissions, and the logic that keeps a site working.</p>
+          </div>
+        </div>
+        <div class="backend-grid">
+          <article class="backend-card">
+            <h3>JavaScript (Node.js)</h3>
+            <p>JavaScript can run on the server with Node.js. Good for fast web apps and APIs.</p>
+          </article>
+          <article class="backend-card">
+            <h3>Python</h3>
+            <p>Clean and beginner-friendly. Often used for backend logic, automation, and data.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="reveal alt">
+      <div class="container quiz-wrap">
+        <h2 class="section-head">Quick quiz</h2>
+        <div class="quiz-card">
+          <p class="quiz-q" id="quizQ"></p>
+          <div class="quiz-options" id="quizOpts"></div>
+          <p class="quiz-feedback" id="quizFb" aria-live="polite"></p>
+          <button class="copy" id="quizNext" hidden>Next question</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Made with clarity by Clifford.</span>
+      <a class="footer-link" href="mailto:hello@clifford.dev">hello@clifford.dev</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
